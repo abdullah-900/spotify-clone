@@ -1,0 +1,50 @@
+
+.player{
+height: 15vh;
+
+    .progress{
+        overflow: visible !important;
+        --bs-progress-bg:#4D4D4D ;
+        --bs-progress-height:0.5rem;
+        padding: 1px;
+        &:hover{
+            .progress-bar{
+            --bs-progress-bar-bg:#1eb454 !important;
+            }
+            .progress-bar::after{
+                --bs-progress-bar-bg:#1eb454 !important;
+                content: '';
+                position: absolute;
+               border-radius: 50%;
+               width: 12px;
+               height: 12px;
+                background-color: #FEFFFE; /* Change this to your desired color */
+                top: 50%;
+                right: 0;
+                transform: translate(50%, -50%);
+           }
+        }
+        .progress-bar{
+          overflow: visible !important;
+        position: relative;
+             --bs-progress-bar-bg:#FEFEFF;
+             &:hover::after{
+                --bs-progress-bar-bg:#1eb454 !important;
+                content: '';
+                position: absolute;
+               border-radius: 50%;
+               width: 12px;
+               height: 12px;
+                background-color: #FEFFFE; /* Change this to your desired color */
+                top: 50%;
+                right: 0;
+                transform: translate(50%, -50%);
+           }
+           &:hover{
+            --bs-progress-bar-bg:#1eb454 !important;
+        }
+        }
+        
+    }
+
+}

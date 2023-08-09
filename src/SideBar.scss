@@ -1,0 +1,24 @@
+.sidebar{
+    height: 100%;
+    margin-top: 2px;
+    padding: 10px;
+ svg{
+    cursor: pointer;
+ }
+ svg:hover {
+   fill: #AACB73;
+   
+ }
+    .first {
+        background-color: #131213;
+        height: 30%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    .second {
+        padding: 10px;
+        background-color: #131213;
+        height: 70%;
+        border-radius: 10px;
+    }
+}
