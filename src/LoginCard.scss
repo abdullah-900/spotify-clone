@@ -1,0 +1,26 @@
+
+.card {
+    border: 0 !important;
+display: flex;
+justify-content: center;
+height: 100%;
+width: 100%;
+gap: 50px;
+align-items: center;
+background-color: #000000;
+h2{
+    color: white;
+}
+.button{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ 
+}
