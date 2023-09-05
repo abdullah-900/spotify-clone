@@ -2,6 +2,7 @@ import React from 'react'
 import './LoginCard.scss'
 import {FcGoogle} from 'react-icons/fc'
 import {AiFillApple} from 'react-icons/ai'
+import {BsSpotify} from 'react-icons/bs'
 import {FaFacebook} from 'react-icons/fa'
 import {signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import {auth} from './firebase/firebaseConfig'
@@ -38,7 +39,7 @@ const LoginPanel = () => {
   async function handleLogin() {
     try {
       const clientId = '8ec0606561a44b8caa93b498245f4508';
-      const redirectUri = 'http://localhost:8080';
+      const redirectUri = 'https://spotify-clone-6lj4rgnxw-abdullah-900.vercel.app/';
       
       let codeVerifier = generateRandomString(128);
       
@@ -59,6 +60,8 @@ const LoginPanel = () => {
         });
       
         window.location.href = 'https://accounts.spotify.com/authorize?' + args;
+        const urlParams = new URLSearchParams(window.location.search);
+        alert(urlParams)
       });
       
                   
@@ -78,18 +81,8 @@ const LoginPanel = () => {
       <h2>Log in to Spotify</h2>
 <div className='d-flex flex-column gap-4'>
 <div onClick={handleLogin} className='button' role='button'>
-<FcGoogle style={{marginLeft:'-5px'}} size='1.25rem'/>
- Continue With Google
+ Login
   </div>
-<div role='button' className='button'>
-<FaFacebook size='1.25rem'/>
- Continue With Facebook
-  </div>
-<div  role='button' className='button'>
-  <AiFillApple style={{marginLeft:'-12px'}} size='1.8rem'/>
-  Continue With Apple
-  </div>
-
 </div>
     </div>
   )
